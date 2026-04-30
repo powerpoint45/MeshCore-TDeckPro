@@ -1,3 +1,21 @@
+# T-Deck Pro — MeshCore Companion Radio (BLE)
+
+This fork is configured for the **LILYGO T-Deck Pro**. To use it, compile and flash the **`Liligo_Tdeck_companion_radio_ble`** environment from PlatformIO. This was ported from the original T-Deck target and has been edited to work correctly with the T-Deck Pro hardware.
+
+## Photos
+
+![Photo 1](photos/PXL_20260430_172728765.jpg)
+![Photo 2](photos/PXL_20260430_172737922.jpg)
+![Photo 3](photos/PXL_20260430_172742721.jpg)
+![Photo 4](photos/PXL_20260430_172749475.MP.jpg)
+![Photo 5](photos/PXL_20260430_172800230.jpg)
+![Photo 6](photos/PXL_20260430_172805727.jpg)
+![Photo 7](photos/PXL_20260430_172817435.jpg)
+![Photo 8](photos/PXL_20260430_172833533.MP.jpg)
+![Photo 9](photos/PXL_20260430_172858748.jpg)
+
+---
+
 ## About MeshCore
 
 MeshCore is a lightweight, portable C++ library that enables multi-hop packet routing for embedded projects using LoRa and other packet radios. It is designed for developers who want to create resilient, decentralized communication networks that work without the internet.
