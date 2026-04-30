@@ -128,7 +128,7 @@ static void initPowerAndSPI() {
   digitalWrite(P_LORA_RESET, HIGH);
 #endif
 
-  delay(500);
+  delay(100);
 }
 
 
@@ -237,7 +237,7 @@ static void initGPSHardwareFromPrefs() {
   if (gps_on) {
     pinMode(PIN_GPS_EN, OUTPUT);
     digitalWrite(PIN_GPS_EN, HIGH);
-    delay(600);
+    delay(50);
 
     Serial2.end();
     Serial2.begin(GPS_BAUD_RATE, SERIAL_8N1, PIN_GPS_RX, PIN_GPS_TX);
@@ -251,7 +251,7 @@ static void initGPSHardwareFromPrefs() {
 
 void setup() {
   Serial.begin(115200);
-  delay(1000);
+  delay(100);
 
   Serial.println();
   Serial.println("--- T-DECK PRO MESHCORE BOOT ---");
@@ -285,7 +285,7 @@ void setup() {
   digitalWrite(PIN_DISPLAY_RST, LOW);
   delay(100);
   digitalWrite(PIN_DISPLAY_RST, HIGH);
-  delay(200);
+  delay(100);
 #endif
 
   if (display.begin()) {
@@ -542,9 +542,9 @@ void loop() {
       if (!ui_task.inChannelChat() && ! ui_task.inContactChat()){
         if (key == 21) {
           ui_task.handleInput(KEY_ENTER);
-        } else if (key == 3) {
+        } else if (key == 3 || key == 20) {
           ui_task.handleInput(KEY_PREV);
-        } else if (key == 2) {
+        } else if (key == 2 || key == 18) {
           ui_task.handleInput(KEY_NEXT);
         } else {
           ui_task.handleInput(c);

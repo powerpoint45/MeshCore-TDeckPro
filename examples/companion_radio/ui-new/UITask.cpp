@@ -305,6 +305,7 @@ if (_task->inChannelChat() || _task->inContactChat()) {
     } else {
         snprintf(title, sizeof(title), "@ %s", active_chat_name);  // @ for direct message
     }
+    
     display.drawTextCentered(display.width() / 2, 18, title);
 
     int y = 32;
